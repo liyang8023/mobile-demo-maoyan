@@ -1,6 +1,6 @@
 <template>
   <div class="movieDetail">
-    <h2>电影详情页</h2>
+    <PageTitle backShow>猫眼电影</PageTitle>
   </div>
 </template>
 <script>
@@ -8,6 +8,9 @@
     name: 'movieDetail',
     data() {
       return {}
-    }
+    },
+    // created() {
+
+    // }
   }
 </script> 

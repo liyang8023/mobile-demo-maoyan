@@ -5,7 +5,14 @@ body, ul, li, p {
 body {
   background-color: #ebebebc0;
 }
+html, body {
+  height: 100%;
+}
 ul {
   list-style: none;
   text-align: left;
+}
+button {
+  outline: none;  
+  border: none;
 }

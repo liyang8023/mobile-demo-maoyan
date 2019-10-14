@@ -1,59 +1,44 @@
 <template>
   <div class="indexPage">
-    <div class="indexTitle">猫眼电影</div>
-    <ul class="tabStyle">
-      <li :class="activeNow === '0' ? 'active' : '' "  @click="activeNow = '0'">正在热映</li>
-      <li :class="activeNow === '1' ? 'active' : '' "  @click="activeNow = '1'">即将上映</li>
-    </ul>
-    <div style="padding:10px 20px; ">
-      <Showing v-show="activeNow === '0'"></Showing>
-      <WillComming v-show="activeNow === '1'"></WillComming>
+    <PageTitle :backShow='false'  v-show="content !== 2">猫眼电影</PageTitle>
+    <div class="content">
+      <MovieIndex v-show="content === 0"></MovieIndex>
+      <div v-show="content === 1">影院</div>
+      <div v-show="content === 2">我的</div>
     </div>
+    <TabBar @changeContent="changeContent"></TabBar>
   </div>
 </template>
 <script>
-import WillComming from './willComming'
-import Showing from './showing'
+import TabBar from '@/components/tabBar';
+import PageTitle from '@/components/pageTitie.vue'
+import MovieIndex from '@/view/movie/movieIndex';
 export default {
   name: 'index',
   components: {
-    WillComming,
-    Showing
+    TabBar, MovieIndex, PageTitle
   },
   data () {
     return {
-      activeNow: '0'
+      content: 0
     }
   },
   methods: {
+    // 底部tab组件切换、内容变化
+    changeContent(content) {
+      this.content = content;
+    }
   }
 }
 </script>
 <style lang="scss" rel='stylesheet/scss'>
-@import '@/assets/scss/main.scss';
-  .indexPage {
-    .indexTitle {
-      height: 50px;
-      line-height: 50px;
-      background-color: $main-red;
-      text-align: center;
-      font-size: 18px;
-      color: $main-white;
-    }
-    .tabStyle {
-      display: flex;
-      flex-direction: row;
-      li {
-        flex: 1;
-        text-align: center;
-        padding: 12px 0;
-        margin: 0 45px;
-        font-size: 16px;
-      }
-    }
-    .active {
-      border-bottom: 2px solid $main-red;
-      color: $main-red;
+  .indexPage { 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .content {
+      flex: 1;
+      padding: 0 20px;
     }
   }
 </style>

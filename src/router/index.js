@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/view/index'
-import MovieDetail from '@/view/movieDetail'
+import MovieDetail from '@/view/movie/movieDetail'
 
 Vue.use(Router)
 

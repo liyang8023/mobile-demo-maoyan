@@ -60,6 +60,16 @@
             mainActors: '杜江',
             showSituation: '今天228家影院放映1264场',
             wantSee: 0
+          },
+          {
+            id: 6,
+            movieName: '攀登者',
+            movieImg: require('@/assets/images/pandengzhe.jpg'),
+            globalReleased: 0,
+            filmReview: 9.5,
+            mainActors: '吴京,章子怡',
+            showSituation: '2019-10-16 下周二上映',
+            wantSee: 2011
           }
         ],
         messageText: '已标记想看',

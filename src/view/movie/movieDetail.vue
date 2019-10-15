@@ -1,11 +1,15 @@
 <template>
   <div class="movieDetail">
-    <PageTitle backShow>猫眼电影</PageTitle>
+    <PageTitle backShow>电影</PageTitle>
   </div>
 </template>
 <script>
+  import PageTitle from '@/components/pageTitie.vue'
   export default {
     name: 'movieDetail',
+    components: {
+      PageTitle
+    },
     data() {
       return {}
     },
@@ -14,3 +18,8 @@
     // }
   }
 </script> 
+<style lang="scss">
+  // .movieDetail {
+
+  // }
+</style>

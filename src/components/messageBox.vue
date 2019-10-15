@@ -22,7 +22,7 @@
       padding: 0 12px 10px ;
       text-align: center;
       position: absolute;
-      top: 42%;
+      top: 50%;
       left: 40%;
       z-index: 100000;
       border: 1px solid $explain-font;

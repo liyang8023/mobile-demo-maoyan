@@ -17,6 +17,8 @@ Vue.config.productionTip = false
 Vue.component('MessageBox', MessageBox)
 Vue.component('icon', Icon)
 
+require('./mock')
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

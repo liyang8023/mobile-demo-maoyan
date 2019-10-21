@@ -28,6 +28,7 @@ export default {
 <style lang="scss" scoped>
   @import '@/assets/scss/main.scss';
   .movieIndex {
+    padding: 0 20px;
     .tabStyle {
       display: flex;
       flex-direction: row;

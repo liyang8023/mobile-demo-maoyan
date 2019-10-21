@@ -4,21 +4,23 @@
     <div class="centerContent">
       <MovieIndex v-show="content === 0"></MovieIndex>
       <div v-show="content === 1">影院</div>
-      <div v-show="content === 2">我的</div>
+      <MineIndex v-show="content === 2"></MineIndex>
     </div>
     <TabBar @changeContent="changeContent"></TabBar>
   </div>
 </template>
 <script>
 import TabBar from "@/components/tabBar";
-import PageTitle from "@/components/pageTitie.vue";
+import PageTitle from "@/components/pageTitie";
 import MovieIndex from "@/view/movie/movieIndex";
+import MineIndex from '@/view/user/mineIndex';
 export default {
   name: "index",
   components: {
     TabBar,
     MovieIndex,
-    PageTitle
+    PageTitle,
+    MineIndex
   },
   data() {
     return {
@@ -41,7 +43,6 @@ export default {
   .centerContent {
     margin-bottom: 70px;
     flex: 1;
-    padding: 0 20px;
     overflow: auto;
   }
 }

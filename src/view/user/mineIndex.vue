@@ -228,7 +228,7 @@ export default {
       li {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $border-color;
         padding: 10px 5px;
         margin-top: 2px;
         .otherIcon {
